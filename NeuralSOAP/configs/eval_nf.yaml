@@ -1,0 +1,31 @@
+defaults:
+  - override hydra/job_logging: custom
+  - _self_
+
+wandb: False
+seed: 1234
+nf_pretrained_path: ../funcmol/exps/neural_field/nf_qm9_20250501_142745_217723
+dirname: ${nf_pretrained_path}/eval
+eval_metric: miou  # miou | sampling
+save_grids_png: True
+n_samples: 2
+
+# overwrite
+split: train
+debug: True
+dset:
+  data_aug: True
+  batch_size: 2
+wjs:
+  batch_size_render: 2
+
+# set the running dir
+hydra:
+  run:
+    dir: ./${dirname}
+  job:
+    config:
+      override_dirname:
+        kv_sep: ""
+        item_sep: "_"
+        exclude_keys: ["exp_dir"]
