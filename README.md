@@ -133,22 +133,6 @@ The reported configuration uses:
 
 Additional implementation details, configuration files, and evaluation scripts are provided in this repository.
 
-## Repository structure
-
-A typical organization is:
-
-```text
-NeuralSOAP/
-├── configs/              # experiment configurations
-├── data/                 # dataset preparation utilities
-├── models/               # neural field, SOAP, and NEB components
-├── sampling/             # walk–jump sampling
-├── evaluation/           # generation and downstream evaluation
-├── scripts/              # training and evaluation entry points
-└── README.md
-```
-
-The exact directory names may differ from the above depending on the released implementation.
 
 ## Reproducibility
 
